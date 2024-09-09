@@ -28,5 +28,5 @@ cmake --build .
 ```
 
 ## Resources
-[Basic drawing in Cairo](https://zetcode.com/gfx/cairo/basicdrawing/)
+- [Basic drawing in Cairo](https://zetcode.com/gfx/cairo/basicdrawing/)
 

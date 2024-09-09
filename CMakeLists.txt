@@ -4,7 +4,7 @@ cmake_minimum_required(VERSION 3.22 VERSION 0.1.0)
 
 project(CairoGtk3Window)
 
-set(HEADER_FILES src/pch/myzdin-pch.h)
+set(HEADER_FILES src/pch/cairo_gtk3_window-pch.h)
 
 file(GLOB_RECURSE SOURCE_FILES "src/*.c")
 

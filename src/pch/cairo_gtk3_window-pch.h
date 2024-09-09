@@ -5,5 +5,4 @@
 #include <cairo.h>
 #include <gtk/gtk.h>
 
-
 #endif  // PCH_H

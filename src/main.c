@@ -23,7 +23,8 @@ int main(int argc, char *argv[]) {
     g_signal_connect(window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     gtk_window_set_position(GTK_WINDOW(window), GTK_WIN_POS_CENTER);
-    gtk_window_set_default_size(GTK_WINDOW(window), WINDOW_WIDTH, WINDOW_HEIGHT);
+    gtk_window_set_default_size(GTK_WINDOW(window), WINDOW_WIDTH,
+                                WINDOW_HEIGHT);
     gtk_window_set_title(GTK_WINDOW(window), "Cairo Gtk3 Window");
 
     gtk_widget_show_all(window);
@@ -33,7 +34,8 @@ int main(int argc, char *argv[]) {
     return 0;
 }
 
-static gboolean OnDrawEvent(GtkWidget *widget, cairo_t *cr, gpointer user_data) {
+static gboolean OnDrawEvent(GtkWidget *widget, cairo_t *cr,
+                            gpointer user_data) {
     DoDrawing(cr, widget);
 
     return FALSE;
@@ -41,7 +43,7 @@ static gboolean OnDrawEvent(GtkWidget *widget, cairo_t *cr, gpointer user_data) 
 
 static void DoDrawing(cairo_t *cr, GtkWidget *widget) {
     GtkWidget *win = gtk_widget_get_toplevel(widget);
-    
+
     int width = 0;
     int height = 0;
     gtk_window_get_size(GTK_WINDOW(win), &width, &height);
@@ -49,12 +51,10 @@ static void DoDrawing(cairo_t *cr, GtkWidget *widget) {
     cairo_set_source_rgb(cr, 0.84, 0.92, 1);
     cairo_set_line_width(cr, 2);
 
-    cairo_translate(cr, width/2, height/2);
+    cairo_translate(cr, width / 2, height / 2);
     cairo_arc(cr, 0, 0, 50, 0, 2 * G_PI);
     cairo_stroke_preserve(cr);
 
     cairo_set_source_rgb(cr, 0.45, 0.76, 1);
     cairo_fill(cr);
 }
-
-

@@ -27,3 +27,6 @@ Compile the project
 cmake --build .
 ```
 
+## Resources
+[Basic drawing in Cairo](https://zetcode.com/gfx/cairo/basicdrawing/)
+

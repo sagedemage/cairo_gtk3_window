@@ -51,7 +51,7 @@ static void DoDrawing(cairo_t *cr, GtkWidget *widget) {
     cairo_set_source_rgb(cr, 0.84, 0.92, 1);
     cairo_set_line_width(cr, 2);
 
-    cairo_translate(cr, width / 2, height / 2);
+    cairo_translate(cr, (float)width / 2, (float)height / 2);
     cairo_arc(cr, 0, 0, 50, 0, 2 * G_PI);
     cairo_stroke_preserve(cr);
 
